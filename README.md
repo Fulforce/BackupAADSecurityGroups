@@ -36,15 +36,19 @@ Time to create our flow!
  ![image](https://user-images.githubusercontent.com/72546386/174013554-86364917-55ee-4687-bc91-b7c39eb3f05e.png)
 
 DisplayName field uses DisplayName from our dynamic content.
+
  ![image](https://user-images.githubusercontent.com/72546386/174013581-2ff0756e-506e-4d73-ab86-3b44f6f03040.png)
 
 UPN uses the UserPrincipalName from our dynamic content.
+
  ![image](https://user-images.githubusercontent.com/72546386/174013599-0724ad73-0512-4e3f-b7a8-8dfa89fbd2a7.png)
 
 JobTitle uses the JobTitle from our dynamic content.
+
  ![image](https://user-images.githubusercontent.com/72546386/174013626-363a4425-36c3-4156-97b4-036b57edc4fc.png)
 
 ObjectID uses the ID from our dynamic content.
+
  ![image](https://user-images.githubusercontent.com/72546386/174013649-84d4a082-a702-4418-998c-78d27f2470d6.png)
 
 7)	Our next Action Step is a SharePoint action of ‘Create file’. I have chosen my SharePoint site address from the drop-down menu and I have browsed to the folder location I wish to deposit my CSV from the folder icon button. The file content is the Output of our ‘Create CSV table’ action in our Dynamic Content.
@@ -66,19 +70,21 @@ ObjectID uses the ID from our dynamic content.
 ![image](https://user-images.githubusercontent.com/72546386/174013817-ddf2f8a1-0558-48a9-87b1-2363cca1da24.png)
 
 Add LastModified from our List folder dynamic content. Set the operator to ‘is less than’. Set the evaluator to an expression. The value of the expression should read: addDays(utcNow(),-29)
+
 ![image](https://user-images.githubusercontent.com/72546386/174013834-3fc2d3bc-227d-46e5-9ea2-d90f8ca05f7f.png)
 
-Add another match criteria for IsFolder from the dynamic content of our List folder. Set the evaluator to is equal to. Then use an express of false
+Add another match criteria for IsFolder from the dynamic content of our List folder. Set the evaluator to is equal to. Then use an expression of false
+
  ![image](https://user-images.githubusercontent.com/72546386/174013869-e23dbe7e-11a0-4731-98f6-2726b13ba05b.png)
  
 13)	 For your If Yes use the SharePoint action of Delete file. 
 14)	 Select your Site Address like you have done previously.
 15)	 In File Identifier use ‘Id’ from your List folder action
+
  ![image](https://user-images.githubusercontent.com/72546386/174013895-bb9ebb64-cfd2-41dc-b2cd-762388321958.png)
 
 16)	 Your Apply to each control should look like this:
  ![image](https://user-images.githubusercontent.com/72546386/174013938-fc8a1263-2ad3-40a5-b09f-b93207b91552.png)
-
 
 
 And there we have it. Your security groups are now being backed up daily to your SharePoint library as a CSV file. Now, if a group is ever deleted by accident, you can create a new one and use Azure AD Bulk Operations to import your members.
@@ -87,6 +93,14 @@ And there we have it. Your security groups are now being backed up daily to your
 
 Download the import template, copy over the list of UPNs from your backup CSV and you’re good to go! I hope this helps 😊
 
+-----------------------------------------------------------
+
+**Your flow from start to finish should look similar to this:**
+![image](https://user-images.githubusercontent.com/72546386/174015189-ac99e5ec-00d5-4802-9fed-78f045ded8d3.png)
+
+![image](https://user-images.githubusercontent.com/72546386/174015489-1529f571-d6f9-4532-a295-20ca456165a5.png)
+
+![image](https://user-images.githubusercontent.com/72546386/174015547-99ed0c9b-e8e3-4c6f-8e62-5a8dea7a4024.png)
 
 
 
