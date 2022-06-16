@@ -22,7 +22,7 @@ Time to create our flow!
 2)	Now add a new action step and use the Azure AD connector and we are going to use “Get group members”.
  ![image](https://user-images.githubusercontent.com/72546386/174013460-a9f06234-5842-4233-8156-61a58ed2ca7f.png)
 
-3)	Enter in the Azure AD Object ID for your security group
+3)	Enter in the Azure AD Object ID for your security group.
  ![image](https://user-images.githubusercontent.com/72546386/174013487-cfcdbd3d-83e0-4b03-a7b7-c5a2a8ee0e96.png)
 
 4)	I have a large group, so I am going to adjust the settings on this action and enable pagination. I will set the threshold to 3000. This will allow the action to fetch more members than it would at the default setting. By default, it will only fetch your first 100 members.
@@ -54,10 +54,10 @@ ObjectID uses the ID from our dynamic content.
 7)	Our next Action Step is a SharePoint action of ‘Create file’. I have chosen my SharePoint site address from the drop-down menu and I have browsed to the folder location I wish to deposit my CSV from the folder icon button. The file content is the Output of our ‘Create CSV table’ action in our Dynamic Content.
  ![image](https://user-images.githubusercontent.com/72546386/174013658-98089250-bd51-4d8d-975a-fd35a009ae4d.png)
 
-8)	For the file name, to add a date and timestamp I have used an Expression of utcNow()
+8)	For the file name, to add a date and timestamp I have used an Expression of utcNow().
  ![image](https://user-images.githubusercontent.com/72546386/174013668-ce8a8aab-4475-4f2a-a4e3-4de2f9900816.png)
 
-9)	Create a new step of another SharePoint action. This time ‘List folder’ Select the same Site address as above. For the File identifier you will need to browse to the same folder location.
+9)	Create a new step of another SharePoint action. This time ‘List folder’. Select the same Site address as above. For the File identifier you will need to browse to the same folder location.
  ![image](https://user-images.githubusercontent.com/72546386/174013689-2f1c0eb6-f839-4d98-86eb-a396f38e8c91.png)
 
 10)	 For your next step at a Control action of Apply to each.
@@ -69,17 +69,20 @@ ObjectID uses the ID from our dynamic content.
 12)	 Add in a Condition action. Set it up like below:
 ![image](https://user-images.githubusercontent.com/72546386/174013817-ddf2f8a1-0558-48a9-87b1-2363cca1da24.png)
 
-Add LastModified from our List folder dynamic content. Set the operator to ‘is less than’. Set the evaluator to an expression. The value of the expression should read: addDays(utcNow(),-29)
+Add 'LastModified' from our 'List folder' dynamic content. Set the operator to ‘is less than’. Set the evaluator to an expression. The value of the expression should read: 
+~~~
+addDays(utcNow(),-29)
+~~~
 
 ![image](https://user-images.githubusercontent.com/72546386/174013834-3fc2d3bc-227d-46e5-9ea2-d90f8ca05f7f.png)
 
-Add another match criteria for IsFolder from the dynamic content of our List folder. Set the evaluator to is equal to. Then use an expression of false
+Add another match criteria for 'IsFolder' from the dynamic content of our 'List folder' dynamic content. Set the evaluator to is equal to. Then use an expression of false.
 
  ![image](https://user-images.githubusercontent.com/72546386/174013869-e23dbe7e-11a0-4731-98f6-2726b13ba05b.png)
  
 13)	 For your If Yes use the SharePoint action of Delete file. 
 14)	 Select your Site Address like you have done previously.
-15)	 In File Identifier use ‘Id’ from your List folder action
+15)	 In File Identifier use ‘Id’ from your List folder action.
 
  ![image](https://user-images.githubusercontent.com/72546386/174013895-bb9ebb64-cfd2-41dc-b2cd-762388321958.png)
 
@@ -91,7 +94,7 @@ And there we have it. Your security groups are now being backed up daily to your
  ![image](https://user-images.githubusercontent.com/72546386/174013956-3d045c68-694e-4e43-bd30-9efcf88c8c3d.png)
 
 
-Download the import template, copy over the list of UPNs from your backup CSV and you’re good to go! I hope this helps 😊
+Download the import template, copy over the list of UPNs from your backup CSV and you’re good to go! I hope this helps. 😊
 
 -----------------------------------------------------------
 
