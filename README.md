@@ -60,10 +60,10 @@ ObjectID uses the ID from our dynamic content.
 9)	Create a new step of another SharePoint action. This time ‘List folder’. Select the same Site address as above. For the File identifier you will need to browse to the same folder location.
  ![image](https://user-images.githubusercontent.com/72546386/174013689-2f1c0eb6-f839-4d98-86eb-a396f38e8c91.png)
 
-10)	 For your next step at a Control action of Apply to each.
+10)	 For your next step add a Control action of 'Apply to each'.
  ![image](https://user-images.githubusercontent.com/72546386/174013702-22fc1dd5-fa09-45d5-a53e-b9d79fa1228e.png)
 
-11)	 Select the output from previous steps needs to be the Body from our List folder operation.
+11)	 Select the output from previous steps needs to be the Body from our 'List folder' operation.
  ![image](https://user-images.githubusercontent.com/72546386/174013712-a8d048af-f4a1-4bc7-8a7b-754b525ca386.png)
 
 12)	 Add in a Condition action. Set it up like below:
@@ -80,7 +80,7 @@ Add another match criteria for 'IsFolder' from the dynamic content of our 'List 
 
  ![image](https://user-images.githubusercontent.com/72546386/174013869-e23dbe7e-11a0-4731-98f6-2726b13ba05b.png)
  
-13)	 For your If Yes use the SharePoint action of Delete file. 
+13)	 For your 'If Yes' result action, use the SharePoint action of 'Delete file'. 
 14)	 Select your Site Address like you have done previously.
 15)	 In File Identifier use ‘Id’ from your List folder action.
 
