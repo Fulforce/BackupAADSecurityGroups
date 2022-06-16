@@ -10,7 +10,7 @@ This solution can easily tweaked to suit your needs, I am giving you a simple ex
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Pre-requisites: 
-- An A1 license with the feature "Power Automate for Office 365" enabled.
+- An E1/A1, E3/A3 or E5/A5 license with the feature "Power Automate for Office 365" enabled.
 - The account must have access to the SharePoint library you wish to publish to. 
 - Be able to read Azure AD security group memberships. Directory Reader role will accomplish this.
 
