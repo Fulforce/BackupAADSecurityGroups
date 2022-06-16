@@ -1,11 +1,11 @@
 # Backup Azure AD Security Groups
 Put your hand up if you have ever deleted an Azure AD Security Group by accident… 🙋‍♂️
 
-Unlike Microsoft 365 Groups, AAD Security Groups (Cloud Only) can’t be restored at the click of a button. Maybe you are using it on your Power Platform environment, or perhaps it is linked to your Conditional Access policies. When this happens, you may need to reinstate a group fast, but you can’t remember exactly who was in the group!
+Unlike Microsoft 365 Groups, AAD Security Groups (Cloud Only) can’t be restored at the click of a button. Maybe you're using them on your Power Platform environment, or perhaps it is linked to your Conditional Access policies. When this happens, you may need to reinstate a group quickly, but can you remember exactly who was in it? I know I wouldn't 😰
 
-Most people don’t even stop to think that cloud only security groups can’t be restored, because it’s 2022… we’ve had recycle bins for ages, right? Meaning we only realise this after an accidental deletion, by which point it’s too late. Well, I have designed a simple Power Automate flow to backup your group memberships for you 😊
+Most people don’t even stop to think that Azure AD security groups can’t be restored, because it’s 2022… we’ve had recycle bins for ages, right? Meaning we only realise this after an accidental deletion, by which point it’s too late. Well, I have designed a simple Power Automate flow to backup your group memberships for you 😊
 
-This solution can be easily tweaked to suit your needs, I am giving you a simple example which backs up one AAD Security Group to CSV and puts it in to a SharePoint library. The flow also auto-deletes files older than 30 days from the SharePoint library, this retention period can easily be modified.
+This solution can easily tweaked to suit your needs, I am giving you a simple example which backs up one AAD Security Group to CSV and puts it in to a SharePoint library. The flow auto-deletes files 30 days and older from the SharePoint library, you can tweak this file retention to however best suits you! 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
