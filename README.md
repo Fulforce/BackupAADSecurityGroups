@@ -5,7 +5,7 @@ Unlike Microsoft 365 Groups, AAD Security Groups (Cloud Only) can’t be restore
 
 Most people don’t even stop to think that Azure AD security groups can’t be restored, because it’s 2022… we’ve had recycle bins for ages, right? Meaning we only realise this after an accidental deletion, by which point it’s too late. Well, I have designed a simple Power Automate flow to backup your group memberships for you 😊
 
-This solution can easily tweaked to suit your needs, I am giving you a simple example which backs up one AAD Security Group to CSV and puts it in to a SharePoint library. The flow auto-deletes files 30 days and older from the SharePoint library, you can tweak this file retention to however best suits you! 
+This solution can easily be tweaked to suit your needs, I am giving you a simple example which backs up one AAD Security Group to CSV and puts it in to a SharePoint library. The flow auto-deletes files 30 days and older from the SharePoint library, you can tweak this file retention to however best suits you! 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
